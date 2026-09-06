@@ -1,0 +1,1447 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #3b0000 0%,
+            #120000 35%,
+            #000000 75%
+        );
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    padding: 35px 20px 20px;
+}
+
+header h1 {
+    font-size: 65px;
+    color: #ff2020;
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 10px #ff0000,
+        0 0 25px #ff0000,
+        0 0 50px #990000;
+}
+
+header p {
+    margin-top: 8px;
+    color: #cccccc;
+    font-size: 18px;
+}
+
+
+/* =========================
+   PESQUISA
+========================= */
+
+.pesquisa {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    margin:
+        25px auto 8px;
+}
+
+.pesquisa input {
+    width: 400px;
+
+    padding:
+        14px 18px;
+
+    border:
+        2px solid #ff2020;
+
+    border-radius: 25px;
+
+    background: #090909;
+
+    color: white;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+.pesquisa input:focus {
+    box-shadow:
+        0 0 15px #ff0000;
+}
+
+
+/* BOTÕES */
+
+.pesquisa button,
+.card button,
+.notas > button,
+.eventos-calendario > button,
+.jogo-card button,
+.botao-verificar {
+
+    border: none;
+
+    background:
+        #d90000;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.pesquisa button {
+    padding:
+        14px 22px;
+
+    border-radius:
+        25px;
+}
+
+
+.pesquisa button:hover,
+.card button:hover,
+.notas > button:hover,
+.eventos-calendario > button:hover,
+.jogo-card button:hover,
+.botao-verificar:hover {
+
+    background:
+        #ff2020;
+
+    box-shadow:
+        0 0 12px #ff0000;
+}
+
+
+.aviso-pesquisa {
+    margin-bottom:
+        35px;
+
+    color:
+        #777777;
+
+    font-size:
+        13px;
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+main > h2 {
+    margin-bottom:
+        25px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 180px);
+
+    justify-content:
+        center;
+
+    gap:
+        25px;
+}
+
+
+.card {
+
+    padding:
+        20px 12px;
+
+    border:
+        2px solid #700000;
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(15, 0, 0, 0.85);
+
+    transition:
+        0.25s;
+}
+
+
+.card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        #ff2020;
+
+    box-shadow:
+        0 0 15px #ff0000,
+        0 0 30px rgba(255, 0, 0, 0.3);
+}
+
+
+.icone {
+
+    font-size:
+        45px;
+
+    margin-bottom:
+        10px;
+}
+
+
+.card h3 {
+
+    color:
+        #ff3030;
+
+    margin-bottom:
+        8px;
+}
+
+
+.card p {
+
+    min-height:
+        35px;
+
+    color:
+        #bbbbbb;
+
+    font-size:
+        13px;
+}
+
+
+.card button {
+
+    margin-top:
+        15px;
+
+    padding:
+        9px 18px;
+
+    border-radius:
+        20px;
+}
+
+
+/* =========================
+   ÁREA DAS FERRAMENTAS
+========================= */
+
+.area-ferramenta {
+
+    width:
+        90%;
+
+    max-width:
+        950px;
+
+    min-height:
+        180px;
+
+    margin:
+        45px auto;
+
+    padding:
+        30px;
+
+    border:
+        2px solid #650000;
+
+    border-radius:
+        20px;
+
+    background:
+        rgba(10, 0, 0, 0.8);
+}
+
+
+/* =========================
+   CALCULADORA
+========================= */
+
+.calculadora {
+
+    width:
+        320px;
+
+    margin:
+        25px auto;
+}
+
+
+#visorCalculadora {
+
+    width:
+        100%;
+
+    height:
+        65px;
+
+    margin-bottom:
+        15px;
+
+    padding:
+        10px;
+
+    border:
+        2px solid #ff2020;
+
+    border-radius:
+        12px;
+
+    background:
+        #050505;
+
+    color:
+        white;
+
+    font-size:
+        28px;
+
+    text-align:
+        right;
+
+    outline:
+        none;
+}
+
+
+.botoes-calculadora {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        8px;
+}
+
+
+.botoes-calculadora button {
+
+    height:
+        55px;
+
+    border:
+        1px solid #700000;
+
+    border-radius:
+        10px;
+
+    background:
+        #150000;
+
+    color:
+        white;
+
+    font-size:
+        20px;
+
+    font-weight:
+        bold;
+
+    cursor:
+        pointer;
+}
+
+
+.botoes-calculadora button:hover {
+
+    background:
+        #d90000;
+
+    box-shadow:
+        0 0 10px #ff0000;
+}
+
+
+.botao-igual {
+
+    grid-column:
+        span 2;
+
+    background:
+        #d90000 !important;
+}
+
+
+/* =========================
+   ANOTAÇÕES
+========================= */
+
+.notas {
+
+    max-width:
+        650px;
+
+    margin:
+        25px auto;
+}
+
+
+#tituloNota,
+#textoNota,
+.eventos-calendario input {
+
+    width:
+        100%;
+
+    margin-bottom:
+        12px;
+
+    padding:
+        14px;
+
+    border:
+        2px solid #700000;
+
+    border-radius:
+        12px;
+
+    background:
+        #050505;
+
+    color:
+        white;
+
+    outline:
+        none;
+}
+
+
+#textoNota {
+
+    height:
+        180px;
+
+    resize:
+        vertical;
+
+    font-family:
+        Arial, sans-serif;
+}
+
+
+.notas > button,
+.eventos-calendario > button,
+.botao-verificar {
+
+    padding:
+        12px 22px;
+
+    border-radius:
+        20px;
+}
+
+
+#listaNotas {
+
+    margin-top:
+        25px;
+}
+
+
+.nota {
+
+    margin-top:
+        15px;
+
+    padding:
+        18px;
+
+    text-align:
+        left;
+
+    border:
+        2px solid #700000;
+
+    border-radius:
+        15px;
+
+    background:
+        #0b0000;
+}
+
+
+.nota h3 {
+
+    color:
+        #ff3030;
+
+    margin-bottom:
+        8px;
+}
+
+
+.nota p {
+
+    color:
+        #cccccc;
+
+    white-space:
+        pre-wrap;
+}
+
+
+.nota button {
+
+    margin-top:
+        12px;
+
+    padding:
+        8px 15px;
+
+    border:
+        none;
+
+    border-radius:
+        15px;
+
+    background:
+        #700000;
+
+    color:
+        white;
+
+    cursor:
+        pointer;
+}
+/* =========================
+   CALENDÁRIO
+========================= */
+
+.eventos-calendario {
+
+    max-width:
+        650px;
+
+    margin:
+        25px auto;
+}
+
+
+#listaEventos {
+
+    margin-top:
+        25px;
+}
+
+
+.evento {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    margin-top:
+        12px;
+
+    padding:
+        15px;
+
+    text-align:
+        left;
+
+    border:
+        2px solid #700000;
+
+    border-radius:
+        12px;
+
+    background:
+        #0b0000;
+}
+
+
+.evento strong {
+
+    color:
+        #ff3030;
+}
+
+
+.evento button {
+
+    padding:
+        7px 12px;
+
+    border:
+        none;
+
+    border-radius:
+        12px;
+
+    background:
+        #700000;
+
+    color:
+        white;
+
+    cursor:
+        pointer;
+}
+
+
+/* =========================
+   OMNIDESIGN
+========================= */
+
+.design-editor {
+
+    max-width:
+        850px;
+
+    margin:
+        25px auto;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        15px;
+}
+
+
+.design-editor label {
+
+    text-align:
+        left;
+
+    color:
+        #ff3030;
+
+    font-weight:
+        bold;
+}
+
+
+.design-editor input {
+
+    width:
+        100%;
+
+    padding:
+        12px;
+
+    border:
+        2px solid #700000;
+
+    border-radius:
+        10px;
+
+    background:
+        #050505;
+
+    color:
+        white;
+}
+
+
+.design-controles {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        12px;
+
+    text-align:
+        left;
+}
+
+
+.design-controles label {
+
+    display:
+        block;
+}
+
+
+.design-area {
+
+    width:
+        100%;
+
+    min-height:
+        400px;
+
+    margin-top:
+        15px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        2px solid #ff2020;
+
+    border-radius:
+        15px;
+
+    background:
+        #000000;
+
+    background-size:
+        cover;
+
+    background-position:
+        center;
+
+    background-repeat:
+        no-repeat;
+
+    overflow:
+        hidden;
+}
+
+
+#designTextoPreview {
+
+    padding:
+        15px;
+
+    font-size:
+        40px;
+
+    font-weight:
+        bold;
+
+    color:
+        white;
+
+    text-align:
+        center;
+
+    word-break:
+        break-word;
+
+    text-shadow:
+        0 0 10px black;
+}
+
+
+/* =========================
+   OMNIMUSIC
+========================= */
+
+.musica {
+
+    max-width:
+        650px;
+
+    margin:
+        25px auto;
+}
+
+
+.musica input[type="file"] {
+
+    width:
+        100%;
+
+    margin-bottom:
+        20px;
+
+    padding:
+        12px;
+
+    border:
+        2px solid #700000;
+
+    border-radius:
+        12px;
+
+    background:
+        #050505;
+
+    color:
+        white;
+}
+
+
+.musica audio {
+
+    width:
+        100%;
+
+    margin-top:
+        10px;
+}
+
+
+#nomeMusica {
+
+    margin-top:
+        20px;
+
+    color:
+        #ff3030;
+
+    font-weight:
+        bold;
+}
+
+
+/* =========================
+   JOGOS
+========================= */
+
+.menu-jogos {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        20px;
+
+    max-width:
+        750px;
+
+    margin:
+        25px auto;
+}
+
+
+.jogo-card {
+
+    padding:
+        20px;
+
+    border:
+        2px solid #700000;
+
+    border-radius:
+        15px;
+
+    background:
+        #0b0000;
+}
+
+
+.jogo-card h3 {
+
+    margin-bottom:
+        10px;
+
+    color:
+        #ff3030;
+}
+
+
+.jogo-card p {
+
+    color:
+        #cccccc;
+
+    min-height:
+        45px;
+
+    font-size:
+        14px;
+}
+
+
+.jogo-card button {
+
+    margin-top:
+        15px;
+
+    padding:
+        10px 18px;
+
+    border-radius:
+        20px;
+}
+
+
+/* =========================
+   NÚMERO SECRETO
+========================= */
+
+.numero-secreto {
+
+    max-width:
+        500px;
+
+    margin:
+        25px auto;
+}
+
+
+.numero-secreto input {
+
+    width:
+        100%;
+
+    margin:
+        15px 0;
+
+    padding:
+        14px;
+
+    border:
+        2px solid #700000;
+
+    border-radius:
+        12px;
+
+    background:
+        #050505;
+
+    color:
+        white;
+
+    font-size:
+        18px;
+
+    text-align:
+        center;
+}
+
+
+#resultadoNumero {
+
+    margin-top:
+        20px;
+
+    font-weight:
+        bold;
+
+    color:
+        #ff3030;
+}
+
+
+/* =========================
+   PEDRA PAPEL TESOURA
+========================= */
+
+.ppt-botoes {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+
+    margin-top:
+        20px;
+}
+
+
+.ppt-botoes button {
+
+    padding:
+        15px 20px;
+
+    border:
+        2px solid #700000;
+
+    border-radius:
+        15px;
+
+    background:
+        #0b0000;
+
+    color:
+        white;
+
+    font-size:
+        16px;
+
+    cursor:
+        pointer;
+}
+
+
+.ppt-botoes button:hover {
+
+    background:
+        #d90000;
+
+    box-shadow:
+        0 0 12px #ff0000;
+}
+
+
+#resultadoPPT {
+
+    margin-top:
+        25px;
+
+    font-size:
+        18px;
+
+    font-weight:
+        bold;
+}
+/* =========================
+   CAÇA-PALAVRAS
+========================= */
+
+.caca-palavras {
+
+    max-width:
+        700px;
+
+    margin:
+        25px auto;
+}
+
+
+.grade-caca-palavras {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(10, 1fr);
+
+    gap:
+        4px;
+
+    max-width:
+        500px;
+
+    margin:
+        25px auto;
+}
+
+
+.letra-caca {
+
+    aspect-ratio:
+        1;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        2px solid #700000;
+
+    border-radius:
+        8px;
+
+    background:
+        #0b0000;
+
+    color:
+        white;
+
+    font-weight:
+        bold;
+
+    cursor:
+        pointer;
+
+    user-select:
+        none;
+}
+
+
+.letra-caca:hover {
+
+    background:
+        #d90000;
+}
+
+
+.letra-caca.selecionada {
+
+    background:
+        #ff2020;
+
+    box-shadow:
+        0 0 10px #ff0000;
+}
+
+
+.palavras-caca {
+
+    margin-top:
+        20px;
+
+    color:
+        #cccccc;
+
+    line-height:
+        1.8;
+}
+
+
+/* =========================
+   CRUZADINHA
+========================= */
+
+.cruzadinha {
+
+    max-width:
+        750px;
+
+    margin:
+        25px auto;
+}
+
+
+.grade-cruzadinha {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(9, 45px);
+
+    justify-content:
+        center;
+
+    gap:
+        4px;
+
+    margin:
+        25px auto;
+}
+
+
+.letra-cruzadinha {
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    border:
+        2px solid #700000;
+
+    border-radius:
+        6px;
+
+    background:
+        #050505;
+
+    color:
+        white;
+
+    text-align:
+        center;
+
+    font-size:
+        20px;
+
+    font-weight:
+        bold;
+
+    text-transform:
+        uppercase;
+
+    outline:
+        none;
+}
+
+
+.letra-cruzadinha:focus {
+
+    border-color:
+        #ff2020;
+
+    box-shadow:
+        0 0 8px #ff0000;
+}
+
+
+.letra-cruzadinha.bloqueada {
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    pointer-events:
+        none;
+}
+
+
+.dicas-cruzadinha {
+
+    max-width:
+        500px;
+
+    margin:
+        25px auto;
+
+    padding:
+        20px;
+
+    text-align:
+        left;
+
+    border:
+        2px solid #700000;
+
+    border-radius:
+        15px;
+
+    background:
+        #0b0000;
+}
+
+
+.dicas-cruzadinha h3 {
+
+    color:
+        #ff3030;
+
+    margin-bottom:
+        12px;
+}
+
+
+.dicas-cruzadinha li {
+
+    margin:
+        8px 0;
+
+    color:
+        #cccccc;
+}
+
+
+/* =========================
+   RESULTADOS DOS JOGOS
+========================= */
+
+.resultado-jogo {
+
+    margin-top:
+        20px;
+
+    padding:
+        15px;
+
+    font-weight:
+        bold;
+
+    color:
+        #ff3030;
+}
+
+
+/* =========================
+   BOTÃO VOLTAR
+========================= */
+
+.botao-voltar {
+
+    margin-top:
+        25px;
+
+    padding:
+        10px 20px;
+
+    border:
+        2px solid #700000;
+
+    border-radius:
+        20px;
+
+    background:
+        #0b0000;
+
+    color:
+        white;
+
+    font-weight:
+        bold;
+
+    cursor:
+        pointer;
+}
+
+
+.botao-voltar:hover {
+
+    background:
+        #d90000;
+
+    box-shadow:
+        0 0 12px #ff0000;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+
+    margin-top:
+        50px;
+
+    padding:
+        25px;
+
+    border-top:
+        1px solid #500000;
+
+    color:
+        #777777;
+
+    font-size:
+        14px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 700px) {
+
+    header h1 {
+
+        font-size:
+            45px;
+    }
+
+
+    .pesquisa {
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+    }
+
+
+    .pesquisa input {
+
+        width:
+            90%;
+    }
+
+
+    .cards {
+
+        grid-template-columns:
+            repeat(2, 160px);
+    }
+
+
+    .design-controles {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .menu-jogos {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .grade-cruzadinha {
+
+        grid-template-columns:
+            repeat(9, 35px);
+    }
+
+
+    .letra-cruzadinha {
+
+        width:
+            35px;
+
+        height:
+            35px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .cards {
+
+        grid-template-columns:
+            1fr;
+
+        width:
+            80%;
+    }
+
+
+    .grade-caca-palavras {
+
+        max-width:
+            95%;
+    }
+
+}

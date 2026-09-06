@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniSoft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>OmniSoft</h1>
+    <p>Um lugar. Várias possibilidades.</p>
+</header>
+
+<main>
+    <section class="pesquisa">
+        <input id="barraPesquisa" type="text" placeholder="Site em desenvolvimento...">
+        <button id="botaoPesquisa">🔎 Pesquisar</button>
+    </section>
+
+    <p class="aviso-pesquisa">🔒 A pesquisa ainda está em desenvolvimento.</p>
+
+    <h2>O que você quer fazer?</h2>
+
+    <section class="cards">
+
+        <div class="card">
+            <div class="icone">🧮</div>
+            <h3>Calculadora</h3>
+            <p>Faça cálculos rapidamente.</p>
+            <button onclick="abrirFerramenta('calculadora')">Abrir</button>
+        </div>
+
+        <div class="card">
+            <div class="icone">📝</div>
+            <h3>Anotações</h3>
+            <p>Escreva e salve suas ideias.</p>
+            <button onclick="abrirFerramenta('anotacoes')">Abrir</button>
+        </div>
+
+        <div class="card">
+            <div class="icone">📅</div>
+            <h3>Calendário</h3>
+            <p>Organize seus compromissos.</p>
+            <button onclick="abrirFerramenta('calendario')">Abrir</button>
+        </div>
+
+        <div class="card">
+            <div class="icone">🎨</div>
+            <h3>Design</h3>
+            <p>Crie seus próprios designs.</p>
+            <button onclick="abrirFerramenta('design')">Abrir</button>
+        </div>
+
+        <div class="card">
+            <div class="icone">🎵</div>
+            <h3>Música</h3>
+            <p>Reproduza suas músicas.</p>
+            <button onclick="abrirFerramenta('musica')">Abrir</button>
+        </div>
+
+        <div class="card">
+            <div class="icone">🎮</div>
+            <h3>Jogos</h3>
+            <p>Divirta-se e estimule o cérebro.</p>
+            <button onclick="abrirFerramenta('jogos')">Abrir</button>
+        </div>
+
+    </section>
+
+    <section id="areaFerramenta" class="area-ferramenta">
+        <h2>Escolha uma ferramenta</h2>
+        <p>Clique em uma das opções acima para começar.</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>OmniSoft © 2026 — Site em desenvolvimento</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
